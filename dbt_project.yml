@@ -38,4 +38,4 @@ models:
   +on_schema_change: "append_new_columns"
   profiles_sync:
     profile_materializations:
-      +materialized: incremental
+      +materialized: table
