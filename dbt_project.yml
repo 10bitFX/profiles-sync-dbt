@@ -36,6 +36,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 # These settings can be overridden in the individual model files with the `{{ config(...) }}` macro.
 models:
   +on_schema_change: "append_new_columns"
+  +grants:
+    select: ["segment", "metabase", "customerio", "lukemalcolm"]  # Add select grants globally
   profiles_sync:
     profile_materializations:
       +materialized: table
